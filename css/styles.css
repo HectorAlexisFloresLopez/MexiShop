@@ -1,0 +1,13 @@
+body {
+    background-color: #cccccc;
+}
+.imagen_perfil {
+    height: auto;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.imagen_perfil:hover {
+    opacity: 0.3;
+    border: 4px solid #E8AF4E;
+}
