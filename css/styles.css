@@ -1,0 +1,8 @@
+body {
+    background-color: white;
+}
+
+.acercade{
+    display: flex;
+    align-items:center;
+}
