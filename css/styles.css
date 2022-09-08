@@ -2,10 +2,7 @@ body {
     background-color: white;
 }
 
-.acercade{
-    display: flex;
-    align-items:center;
-}
+
 .header {
     margin:auto;
     justify-content: space-between;
