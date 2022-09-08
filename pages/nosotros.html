@@ -10,6 +10,50 @@
     background-color: white;
     font-family: 'Carrois Gothic', sans-serif;
         }
+        .flex-container{
+            display: flex;
+            background-color: #282f36 ;
+            height: 66px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .logo img{
+            padding: 25px;
+            width: 135px;
+        }
+        .nav1 .primer a{
+            color:#C2943F;
+            justify-content: space-around;
+            padding: 25px;
+            font-size: 85%;
+            font-family: 'Carrois Gothic', sans-serif;
+        }
+        .primer a:hover{
+            
+            color: #ffffff;
+            text-decoration:underline;
+            font-size: 80%;
+        }
+        .primer a:active{
+            color: aqua;
+        }
+        .nav2{
+            display: flex;
+        }
+        .nav2 a img{
+            justify-content: center;
+            width: 40px; 
+            padding: 10px;
+        }
+        .nav2 img:hover{
+            width: 45px;
+        }
+        .logo img:hover{
+            width: 150px;
+        }
+
+    
         .quienes{
             text-align: center;
         }
@@ -60,38 +104,32 @@
             margin-right: 33.33%;
             text-align: justify;
         }
+       
         
     </style>
     <title>Nosotros</title>
   </head>
   <body>
     <header>
-        
-        <ul  style="background-color: #282f36;">
-            <!-- Image and text -->
-            <li class="logo-home">
-            <a class="navbar-brand" href="#">
-            <img src="https://res.cloudinary.com/pixel-direction/image/upload/v1662500851/MEXISHOP/1ala620_lteygg.png" width="5%" class="d-inline-block align-top" alt="" style="margin: 3px;" >
-            </a>
-            </li>
-            <div class="nav justify-content-center" > 
-            <li class="nav-item ">
-              <a class="nav-link " href="#" >Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Catálogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hazte Socio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contáctanos</a>
-            </li>
+         
+        <div class="flex-container">
+            <div class="logo"><img src="https://res.cloudinary.com/pixel-direction/image/upload/v1662500851/MEXISHOP/1ala620_lteygg.png" width="90px" st class="d-inline-block align-top" alt="" style="margin: 0px;" >
             </div>
-          </ul>
+            <div class="nav1">
+                <nav class="primer">
+                    <a href="#">INICIO</a>
+                    <a href="#">CATÁLOGO</a>
+                    <a href="#">NOSOTROS</a>
+                    <a href="#">HAZTE SOCIO</a>
+                    <a href="#">CONTÁCTANOS</a>
+                </nav>
+            </div>
+            <div class="nav2">
+                    <a href="#"><img src="../images/Vectorbuscar.png"  alt="buscar"></a>
+                    <a href="#"><img src="../images/Unionperfil.png"  alt="perfil"></a>
+                    <a href="#"><img src="../images/Unioncarrito.png"  alt="carrito"></a>      
+            </div>
+        </div>
 
     </header>
     <div class="container">
