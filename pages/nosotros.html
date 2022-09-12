@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/nosotros.css">
    <style>     
+        /*Estilos nav*/
+.flex-container{
+            display: flex;
+            background-color: #282f36 ;
+            height: 66px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .logo img{
+            padding: 25px;
+            width: 135px;
+        }
+        .nav1 .primer a{
+            color:#C2943F;
+            justify-content: space-around;
+            padding: 25px;
+            font-size: 85%;
+            font-family: 'Carrois Gothic', sans-serif;
+        }
+        .primer a:hover{
+            
+            color: #ffffff;
+            text-decoration:underline;
+            font-size: 80%;
+        }
+        .primer a:active{
+            color: aqua;
+        }
+        .nav2{
+            display: flex;
+        }
+        .nav2 a img{
+            justify-content: center;
+            width: 40px; 
+            padding: 10px;
+        }
+        .nav2 img:hover{
+            width: 45px;
+        }
+        .logo img:hover{
+            width: 150px;
+        }
            /*estilos del body*/
     body {      
     background-color: white;
@@ -82,14 +125,14 @@
         .copy p{
             padding-left: 15px;
             padding-top: 22px;
-            float: left;
+            float: right;
             color: #E8AF4E;
             font-size: 87%;
         }
         .flex-container{
             
             flex-direction: column;
-            float: right;
+            float: left;
             color: #E8AF4E;
             justify-content: center;
             padding: 1px;
@@ -113,6 +156,7 @@
 
         }
 
+
     </style> 
 
 </head>
@@ -121,31 +165,26 @@
 </head>
   <body>
     <header>
-        <ul  style="background-color: #282f36;">
-            <!-- Image and text -->
-            <li class="logo-home">
-            <a class="navbar-brand" href="#">
-            <img src="https://res.cloudinary.com/pixel-direction/image/upload/v1662500851/MEXISHOP/1ala620_lteygg.png" width="5%" class="d-inline-block align-top" alt="" style="margin: 3px;" >
-            </a>
-            </li>
-            <div class="nav justify-content-center" > 
-            <li class="nav-item ">
-              <a class="nav-link " href="#" >Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Catálogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hazte Socio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contáctanos</a>
-            </li>
+         
+        <div class="flex-container">
+            <div class="logo"><img src="https://res.cloudinary.com/pixel-direction/image/upload/v1662500851/MEXISHOP/1ala620_lteygg.png" width="90px" st class="d-inline-block align-top" alt="" style="margin: 0px;" >
             </div>
-          </ul>
+            <div class="nav1">
+                <nav class="primer">
+                    <a href="#">INICIO</a>
+                    <a href="#">CATÁLOGO</a>
+                    <a href="#">NOSOTROS</a>
+                    <a href="#">HAZTE SOCIO</a>
+                    <a href="#">CONTÁCTANOS</a>
+                </nav>
+            </div>
+            <div class="nav2">
+                    <a href="#"><img src="../src/Vectorbuscar.jpg"  alt="buscar"></a>
+                    <a href="#"><img src="../src/Unionperfil.jpg"  alt="perfil"></a>
+                    <a href="#"><img src="../src/Unioncarrito.jpg"  alt="carrito"></a>      
+            </div>
+        </div>
+
     </header>
             <h1>Acerca de Nosotros</h1>
     <div class="container">
