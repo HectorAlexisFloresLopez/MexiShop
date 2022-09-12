@@ -1,8 +1,21 @@
+
 body {
     background-color: white;
 }
 
+<<<<<<< HEAD
 .acercade{
     display: flex;
     align-items:center;
 }
+=======
+
+.header {
+    margin:auto;
+    justify-content: space-between;
+
+}
+.logo-home {
+    
+}
+>>>>>>> 4f9ab46aaaed076857115be7af41c9ed4c9b4c70
