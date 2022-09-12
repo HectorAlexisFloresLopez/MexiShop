@@ -40,3 +40,16 @@
   .text-input:focus::placeholder {
     opacity: 1;
   }
+
+  .btn {
+    background: var(--oscuro);
+    border: 2px solid var(--dorado);
+    color: var(--blanco);
+    border-radius: 25px;
+  }
+
+  .btn:hover {
+    background-color: var(--dorado);
+    border: 2px solid var(--oscuro);
+    color: var(--oscuro);
+  }
