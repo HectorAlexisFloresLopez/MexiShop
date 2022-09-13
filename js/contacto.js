@@ -53,6 +53,17 @@ btnEnviar.addEventListener("click", function(e){
     }
 
     
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "mexishopgeneration@gmail.com",
+        Password : "406D1B6FBC2FB61ED5E9ECFA9453067FFF4F",
+        To : 'mexishopgeneration@gmail.com',
+        From : "mexishopgeneration@gmail.com",
+        Subject : "Contáctanos Mexishop",
+        Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );     
 
 
 });
