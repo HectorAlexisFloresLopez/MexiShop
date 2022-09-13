@@ -44,3 +44,42 @@
   .text-input:focus::placeholder {
     opacity: 1;
   }
+
+   /*estilos del footer*/
+   footer{
+    height: 70px;
+    background-color: #282F36;
+}
+.copy p{
+    padding-left: 15px;
+    padding-top: 22px;
+    float: left;
+    color: #E8AF4E;
+    font-size: 87%;
+}
+.flex-container{
+    
+    flex-direction: column;
+    float: right;
+    color: #E8AF4E;
+    justify-content: center;
+    padding: 1px;
+}
+
+.seguir .ya{
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    margin: 0px;    
+}
+.facebook {
+  padding-left: 22px;              
+  padding-left: 10px;         
+    
+    
+}   
+.facebook:hover{
+  transition: transform 0.3s;
+  transform: scale(1.5);
+
+}

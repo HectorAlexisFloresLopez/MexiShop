@@ -52,18 +52,32 @@ btnEnviar.addEventListener("click", function(e){
         mensaje.classList.add("is-invalid");
     }
 
+    if ((nombre.value.length >= 12)
+        &&
+        (tlf.value.length>=10)
+        &&
+        (! isNaN(tlf.value))
+        &&
+        !(mail.validity.typeMismatch)
+        &&
+        (mail.value.length >= 6)
+        &&
+        (mensaje.value.length >= 15) //validacion mensaje
+        && 
+        (mensaje.value.length <=140)
+    ) {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "mexishopgeneration@gmail.com",
+            Password : "406D1B6FBC2FB61ED5E9ECFA9453067FFF4F",
+            To : 'mexishopgeneration@gmail.com',
+            From : "mexishopgeneration@gmail.com",
+            Subject : "Contáctanos Mexishop",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );          
+    }
     
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "mexishopgeneration@gmail.com",
-        Password : "406D1B6FBC2FB61ED5E9ECFA9453067FFF4F",
-        To : 'mexishopgeneration@gmail.com',
-        From : "mexishopgeneration@gmail.com",
-        Subject : "Contáctanos Mexishop",
-        Body : "And this is the body"
-    }).then(
-    message => alert(message)
-    );     
-
 
 });
