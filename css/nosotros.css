@@ -19,49 +19,58 @@
     background-color: #E8AF4E;
 }
 
-        /*Estilos nav*/
-        .NavigationBar{
-            display: flex;
-            background-color: #282f36 ;
-            height: 66px;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .logo img{
-            padding: 25px;
-            width: 135px;
-        }
-        .nav1 .primer a{
-            color:#C2943F;
-            justify-content: space-around;
-            padding: 25px;
-            font-size: 85%;
-            font-family: 'Carrois Gothic', sans-serif;
-        }
-        .primer a:hover{
-            
-            color: #ffffff;
-            text-decoration:underline;
-            font-size: 80%;
-        }
-        .primer a:active{
-            color: aqua;
-        }
-        .nav2{
-            display: flex;
-        }
-        .nav2 a img{
-            justify-content: center;
-            width: 40px; 
-            padding: 10px;
-        }
-        .nav2 img:hover{
-            width: 45px;
-        }
-        .logo img:hover{
-            width: 150px;
-        }
+        /* New Nav bootstrap*/
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Carrois Gothic SC', sans-serif;
+  }
+  
+  .menu-bar {
+     background-color: #282f36;
+     
+  }
+  .nav-link {
+     font-size: 16px;
+     margin: 5px;
+     color: #e8af4e!important;
+     font-weight: 500;
+  }
+  
+  .navbar-nav {
+     text-align: right;
+     margin-right: 20px;
+  }
+  
+  .menu-bar .navbar-toggler {
+     padding-right: 20px;
+     outline: none!important;
+     border: none!important;
+     color: #e8af4e;
+  }
+  
+  .navbar .fa {
+     color: #e8af4e;
+     font-size: 26px;
+  }
+  
+  
+  .nav-link:hover {
+     font-weight: 600;
+     border-bottom: 1px solid #e8af4e;
+  }
+  
+  .navbar-brand img{
+     width: 80px;
+     margin-top: 5px;
+     margin-left: 20px;
+  }
+  @media only screen and (max-width: 1000px) {
+     .nav-link:hover {
+         border-bottom: none!important;
+     }
+  }
+  
            /*estilos del body*/
     body {      
     background-color: white;
@@ -127,44 +136,69 @@
             }
         }
 
-        
-        
-        /*estilos del footer*/
-        footer{
-            height: 70px;
-            background-color: #282F36;
-        }
-        .copy p{
-            padding-left: 15px;
-            padding-top: 22px;
-            float: right;
-            color: #E8AF4E;
-            font-size: 87%;
-        }
-        .foot{
-            
-            flex-direction: column;
-            float: left;
-            color: #E8AF4E;
-            justify-content: center;
-            padding: 1px;
-        }
-        
-        .seguir .ya{
-            padding-right: 15px;
-            padding-top: 8px;
-            padding-bottom: 0px;
-            margin: 0px;    
-        }
-        .facebook {
-          padding-left: 22px;              
-          padding-left: 10px;         
-            
-            
-        }   
-        .facebook:hover{
-          transition: transform 0.3s;
-          transform: scale(1.5);
-
-        }
-
+         /*estilos del footer*/
+ footer{
+    height: 70px;
+    background-color: #282F36;
+  }
+  .flex-container{
+      
+    flex-direction: column;
+    float: right;
+    color: #E8AF4E;
+    justify-content: center;
+    padding: 1px;
+  }
+  
+  .seguir .ya{
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    margin: 0px;    
+  }
+  .facebook {
+  padding-left: 22px;              
+  padding-left: 10px;         
+    
+    
+  }   
+  .facebook:hover{
+  transition: transform 0.3s;
+  transform: scale(1.5);
+  
+  }
+  a.nav-link img{
+    width: 30px;
+    padding: 2px;
+  }
+  img:hover{
+    transition: transform 0.2s;
+    transform: scale(1.5);
+  
+  }
+  
+  .copy p{
+    padding-left: 15px;
+    padding-top: 22px;
+    float: left;
+    color: #E8AF4E;
+    font-size: 16px;
+  }
+  
+  .seguir .ya{
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    margin: 0px;    
+  }
+  
+  @media (max-width: 680px) {
+    .copy p{
+      font-size: 12px;
+      width: 65%;
+    }
+  
+    .ya {
+      font-size: 12px;
+    }
+  }

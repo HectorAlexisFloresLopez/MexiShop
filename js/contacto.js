@@ -8,7 +8,10 @@ btnEnviar.addEventListener("click", function(e){
     e.preventDefault();
     
 
-    if (nombre.value.length >= 12) { //validacion nombre
+    if ((nombre.value.length >= 3)
+        &&
+        (isNaN(nombre.value))
+    ) { //validacion nombre
         nombre.classList.remove("is-invalid");
         nombre.classList.add("is-valid");
     } else {
@@ -20,6 +23,8 @@ btnEnviar.addEventListener("click", function(e){
         (tlf.value.length>=10)
         &&
         (! isNaN(tlf.value))
+        &&
+        (tlf.value!=0000000000)
     ){                               //validación Teléfono 
         tlf.classList.remove("is-invalid");
         tlf.classList.add("is-valid");
@@ -72,8 +77,14 @@ btnEnviar.addEventListener("click", function(e){
             Password : "406D1B6FBC2FB61ED5E9ECFA9453067FFF4F",
             To : 'mexishopgeneration@gmail.com',
             From : "mexishopgeneration@gmail.com",
-            Subject : "Contáctanos Mexishop",
-            Body : "And this is the body"
+            Subject : `Contáctanos Mexishop ${nombre.value}`,
+            Body : `${mensaje.value}
+            <br>
+            <br>
+            <br>
+            A nombre: ${nombre.value}
+            Teléfono de contacto: ${tlf.value}
+            `
         }).then(
         message => alert(message)
         );          
