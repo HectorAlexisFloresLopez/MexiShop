@@ -123,13 +123,13 @@
         }
 
         .quienes{
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-left: 5%;
+            margin-right: 5%;
             text-align: center;
             text-align: justify;
         }
 
-        @media (min-width: 480px) {
+        @media (min-width: 768px) {
             .quienes{
             margin-left: 33.33%;
             margin-right: 33.33%;
