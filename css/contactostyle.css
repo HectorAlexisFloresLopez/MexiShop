@@ -129,7 +129,8 @@ a.nav-link img{
 width: 30px;
 padding: 2px;
 }
-img:hover{
+
+.navimg:hover{
 transition: transform 0.2s;
 transform: scale(1.5);
 

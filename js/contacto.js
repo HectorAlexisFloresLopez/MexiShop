@@ -46,7 +46,7 @@ btnEnviar.addEventListener("click", function(e){
     }
 
     if (
-        (mensaje.value.length >= 15) //validacion mensaje
+        (mensaje.value.length >= 20) //validacion mensaje
         && 
         (mensaje.value.length <=140)
     ){ 
@@ -63,11 +63,13 @@ btnEnviar.addEventListener("click", function(e){
         &&
         (! isNaN(tlf.value))
         &&
+        (tlf.value!=0000000000)
+        &&
         !(mail.validity.typeMismatch)
         &&
         (mail.value.length >= 6)
         &&
-        (mensaje.value.length >= 15) //validacion mensaje
+        (mensaje.value.length >= 20) //validacion mensaje
         && 
         (mensaje.value.length <=140)
     ) {
@@ -82,7 +84,7 @@ btnEnviar.addEventListener("click", function(e){
             <br>
             <br>
             <br>
-            A nombre: ${nombre.value}
+            A nombre de: ${nombre.value}
             Teléfono de contacto: ${tlf.value}
             `
         }).then(
