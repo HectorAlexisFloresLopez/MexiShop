@@ -1,65 +1,55 @@
 :root {
-    --oscuro: #000000;
-    --azul: #282F36;
-    --cafe: #5b441d;
-    --dorado: #c2943f;
-    --amarillo: #e8af4e;
-    --blanco: #ffffff;
+  --oscuro: #000000;
+  --azul: #282F36;
+  --cafe: #5b441d;
+  --dorado: #c2943f;
+  --amarillo: #e8af4e;
+  --blanco: #ffffff;
 }
 
 .subtema {
-    font-size: 32px;
-    color: var(--azul);
-    font-family: 'Carrois Gothic SC', sans-serif;
+  font-size: 32px;
+  color: var(--azul);
+  font-family: 'Carrois Gothic SC', sans-serif;
 }
 
 .dorado {
-  color: var(--dorado)
+color: var(--dorado)
 }
 
 body {
-    background-color: var(--blanco);
+  background-color: var(--blanco);
 }
 
 .fondo_dorado {
-  background-color: #c2943f;
+background-color: #c2943f;
 }
 
 
 .header {
-    margin:auto;
-    justify-content: space-between;
+  margin:auto;
+  justify-content: space-between;
 
 }
 
-/* .portada {
-     background-image: url(../src/fondoNombre.png); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    position: relative;
-    
-  } */
+.portada_contacto {
+  background-color: #C2943F;
+  border-radius: 30px;  
+  box-shadow: 0px 4px 4px;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  width: 40%;
+  font-size: 32px;
+  text-align: center;
+}
 
+@media (max-width: 800px) {
   .portada_contacto {
-    background-color: #C2943F;
-    border-radius: 30px;  
-    box-shadow: 0px 4px 4px;
-    font-family: 'Carrois Gothic SC', sans-serif;
-    width: 40%;
-    font-size: 32px;
-    text-align: center;
+    font-size: 20px;
+    width: 80%;
   }
-
-  @media (max-width: 800px) {
-    .portada_contacto {
-      font-size: 20px;
-      width: 80%;
-    }
 }
 
 .texto {
-  font-size: 20px;
-  font-family: 'Carrois Gothic SC', sans-serif;
+font-size: 20px;
+font-family: 'Carrois Gothic SC', sans-serif;
 }
