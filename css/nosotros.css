@@ -192,6 +192,17 @@
     margin: 0px;    
   }
   
+  .dropdown-menu {
+    background-color: #282F36;
+  
+  }
+  
+  .dropdown-item {
+    color: #C2943F !important; 
+    font-family: 'Carrois Gothic SC', sans-serif;
+  
+  }
+
   @media (max-width: 680px) {
     .copy p{
       font-size: 12px;
