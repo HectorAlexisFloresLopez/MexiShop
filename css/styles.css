@@ -42,6 +42,17 @@ background-color: #c2943f;
   text-align: center;
 }
 
+.dropdown-menu {
+  background-color: #282F36;
+
+}
+
+.dropdown-item {
+  color: #C2943F !important; 
+  font-family: 'Carrois Gothic SC', sans-serif;
+
+}
+
 @media (max-width: 800px) {
   .portada_contacto {
     font-size: 20px;
