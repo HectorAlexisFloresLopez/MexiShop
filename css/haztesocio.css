@@ -1,0 +1,73 @@
+body {      
+    background-color: white;
+    color: #000000;
+}
+
+
+h1{
+    padding-top: 30px;
+    font-size: 50px;
+    margin-left: 10%;
+}
+
+.parrafo1 {
+    font-style: normal;
+}
+
+.btn.btn-lg {
+    background-color: #e8af4e;
+    color: #282F36;
+}
+
+h2 {padding: 15px;
+    font-size: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-style: normal;
+}
+
+p.par {
+    padding: 40px;
+    text-align: justify;
+}
+
+ .col.py-3.px-lg-5 {
+    font-style: italic;
+    padding-top: 80px;
+    padding: 35px;
+}
+
+.card {
+    font-size: 35px;
+    background-color: #e8af4e;
+}
+
+a.btn {
+    color: #f2f2f2;
+    background-color: #282F36;
+}
+a.btn:hover {
+color: #e8af4e;
+}
+
+.circular--square {
+    border-radius: 50%;
+    
+  }
+
+  .circular--square {
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+  }
+
+  .preguntas {
+    padding: 40px;
+  }
+  li {
+    font-size: larger;
+    font-weight: bold;
+}
