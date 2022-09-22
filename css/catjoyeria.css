@@ -141,3 +141,7 @@
 .col-sm-12{
     justify-content: center;
 }
+
+.card:hover{
+  box-shadow: 4px 4px 4px rgb(219, 219, 219);
+}

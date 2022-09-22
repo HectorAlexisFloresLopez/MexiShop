@@ -146,3 +146,7 @@
     height: 25vw;
     object-fit: contain;
 }
+
+.card:hover{
+  box-shadow: 4px 4px 4px rgb(219, 219, 219);
+}
