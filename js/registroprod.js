@@ -1,23 +1,34 @@
-let btn = document.getElementById("btnSubmit");
 
-btnSubmit.addEventListener("click", function(e) {
-    e.preventDefault();
+
     let id = document.getElementById("id");
-    console.log(id.value)
     let nameprod = document.getElementById("nameprducto");
-    console.log(nameprod.value)
     let img = document.getElementById("imgproduct");
-    console.log(img.value)
     let cost = document.getElementById("precio");
-    console.log(cost.value)
     let comment = document.getElementById("comentarios");
-    console.log(comment.value)
+    let btnagregar = document.getElementById("btnSubmit");
 
 
-    console.log(typeof(id.value), typeof(nameprod.value), typeof(img.value), 
-                typeof(cost.value), typeof(comment.value));
-    console.log(id.value.length, nameprod.value.length, img.value.length, cost.value.length, comment.value.length);
+btnagregar.addEventListener("click",function(e){
+    e.preventDefault() ;
+    
+})
 
+
+btnagregar.addEventListener("click", function(e) {
+    e.preventDefault();
+
+let item = {"id":"", 
+        "name":"",
+        "img": "",
+        "description":"",
+        "precio": ""
+       }
+
+         item.name = name.value;
+         item.id = idItem.value;
+         item.img = image.value;
+         item.description = desc.value;
+         item.precio = price.value;    
 
     let cod = id.value;
     console.log(id.value.length);
@@ -75,3 +86,4 @@ btnSubmit.addEventListener("click", function(e) {
     } //If Descripcion
 
 });
+
