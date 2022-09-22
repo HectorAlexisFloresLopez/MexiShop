@@ -66,7 +66,7 @@ addItem(itemsCont2, {'name':'Gato Floreado',
 'description':'Alebrije hecho de madera copal por artesanos de Oaxaca. La técnica es un proceso largo. Se talla la pieza en madera de copal sobre todo y se tiene que dejar secando por un tiempo a veces hasta de un año para permitir que la madera se seque completamente antes de pintarla. Una vez la pieza seca se procede a pulirla de manera que la pintura, que normalmente es elaborada con pigmentos naturales, se aplique a la pieza. Altura:65cm. ', 'precio':'25,050'});
 
 
-addItem(itemsCont2, {'name':'Búho del Cenit',
+addItem(itemsCont1, {'name':'Búho del Cenit',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663788233/Alebrijes/alebrijes9_m3ogql.png',
     'description':'Impresionante trabajo de cerámica con shakiras incrustadas en el cuerpo. Altura:35 cm. Peso: 2.400 kg.','precio':'11,500'});
 
