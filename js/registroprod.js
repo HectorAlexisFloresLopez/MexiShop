@@ -1,18 +1,22 @@
 
-
+    let tabla = document.getElementById("tabla");
     let id = document.getElementById("id");
-    let nameprod = document.getElementById("nameprducto");
+    let nameprod = document.getElementById("nameproducto");
     let img = document.getElementById("imgproduct");
     let cost = document.getElementById("precio");
     let comment = document.getElementById("comentarios");
     let btnagregar = document.getElementById("btnSubmit");
 
+    tabla.innerHTML += `<thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>`
 
-btnagregar.addEventListener("click",function(e){
-    e.preventDefault() ;
-    
-})
-
+    let inventario = [];
 
 btnagregar.addEventListener("click", function(e) {
     e.preventDefault();
@@ -24,11 +28,11 @@ let item = {"id":"",
         "precio": ""
        }
 
-         item.name = name.value;
-         item.id = idItem.value;
-         item.img = image.value;
-         item.description = desc.value;
-         item.precio = price.value;    
+         item.name = nameprod.value;
+         item.id = id.value;
+         item.img = img.value;
+         item.description = comment.value;
+         item.precio = cost.value;    
 
     let cod = id.value;
     console.log(id.value.length);
@@ -84,6 +88,10 @@ let item = {"id":"",
         comment.classList.remove("is-valid");
         comment.classList.add("is-invalid");
     } //If Descripcion
+
+    //mandar información a localstorage
+    inventario.push(item)
+    localStorage.setItem("catalogo", JSON.stringify(inventario))
 
 });
 
