@@ -97,7 +97,22 @@ let item = {"id":"",
         comment.classList.add("is-invalid");
     } //If Descripcion
 
-    //mandar información a localstorage
+    if ((id.value.length==4) 
+        && 
+        (! isNaN(id.value))
+        &&
+        (nameprod.value.length >=6)
+        &&
+        (img.value.length >=10)
+        &&
+        (cost.value.length>=3) 
+        && 
+        (! isNaN(cost.value))
+        &&
+        (comment.value.length >=30)) {
+        //mandar información a localstorage
+
+    
     inventario.push(item)
     localStorage.setItem("catalogo", JSON.stringify(inventario))
 
@@ -111,8 +126,13 @@ let item = {"id":"",
               <td>${element.precio}</td>
               <td>${element.description}</td>
             </tr>`
+        
+       
             
         });
+    }//if de validacion
 
-});
+    
+
+});// btn Agregar
 
