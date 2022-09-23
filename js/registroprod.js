@@ -9,14 +9,30 @@
 
     tabla.innerHTML += `<thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">PRODUCTO</th>
+      <th scope="col">IMAGEN</th>
+      <th scope="col">PRECIO</th>
+      <th scope="col">COMENTARIOS</th>
     </tr>
   </thead>`
 
     let inventario = [];
+    if (localStorage.getItem("catalogo")) {
+        let tmp = JSON.parse(localStorage.getItem("catalogo"))
+        tmp.forEach(element => {
+            tabla.innerHTML += `<tbody>
+            <tr>
+              <th scope="row">${element.id}</th>
+              <td>${element.name}</td>
+              <td>${element.img}</td>
+              <td>${element.precio}</td>
+              <td>${element.description}</td>
+            </tr>`
+            
+        });
+        
+    }
 
 btnagregar.addEventListener("click", function(e) {
     e.preventDefault();
@@ -34,13 +50,9 @@ let item = {"id":"",
          item.description = comment.value;
          item.precio = cost.value;    
 
-    let cod = id.value;
-    console.log(id.value.length);
-    console.log(isNaN(cod));
-
     if ((id.value.length==4) 
         && 
-        (! isNaN(cod))
+        (! isNaN(id.value))
     ) {
         id.classList.remove("is-invalid");
         id.classList.add("is-valid");
@@ -66,13 +78,9 @@ let item = {"id":"",
         img.classList.add("is-invalid");
     } //If URL Img
 
-    let price = cost.value;
-    console.log(cost.value.length);
-    console.log(isNaN(price));
-
     if ((cost.value.length>=3) 
         && 
-        (! isNaN(price))
+        (! isNaN(cost.value))
     ) {
         cost.classList.remove("is-invalid");
         cost.classList.add("is-valid");
@@ -92,6 +100,19 @@ let item = {"id":"",
     //mandar información a localstorage
     inventario.push(item)
     localStorage.setItem("catalogo", JSON.stringify(inventario))
+
+    let tmp = JSON.parse(localStorage.getItem("catalogo"))
+        tmp.forEach(element => {
+            tabla.innerHTML += `<tbody>
+            <tr>
+              <th scope="row">${element.id}</th>
+              <td>${element.name}</td>
+              <td>${element.img}</td>
+              <td>${element.precio}</td>
+              <td>${element.description}</td>
+            </tr>`
+            
+        });
 
 });
 
