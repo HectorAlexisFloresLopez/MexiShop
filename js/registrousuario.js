@@ -17,7 +17,7 @@ btnRegistrar.addEventListener("click", function(e){
         }
     });
 
-//ejemploLuis
+//Validadciones
 if ((nombre.value.length>=3) 
         && 
         (isNaN(nombre.value))
@@ -27,7 +27,7 @@ if ((nombre.value.length>=3)
     } else {
         nombre.classList.remove("is-valid");
         nombre.classList.add("is-invalid");
-    } // ID validacion
+    } // If nombre 
 
 
     if (email.value.length >=12)  {
@@ -46,7 +46,7 @@ if ((nombre.value.length>=3)
         Telefono.classList.add("is-invalid");
     } //If telefono
 
-    if ((contra.value==contracof.value) //Luistqm<3
+    if ((contra.value==contracof.value) 
         && 
         (cont>0)
         &&
@@ -63,7 +63,7 @@ if ((nombre.value.length>=3)
 
         contracof.classList.remove("is-valid");
         contracof.classList.add("is-invalid");
-    } // validacion Costo
+    } //If validacion contraseña
 
 
-}); 
+});//addEventListener
