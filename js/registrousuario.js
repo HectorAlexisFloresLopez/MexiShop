@@ -5,6 +5,9 @@ let contra = document.getElementById("contra");
 let contracof = document.getElementById("contraconf");
 let btnRegistrar = document.getElementById("btnSubmit");
 
+let usuarios = []
+
+
 btnRegistrar.addEventListener("click", function(e){
      e.preventDefault();
 
@@ -72,5 +75,8 @@ if ((nombre.value.length>=3)
         "contrasena":contra.value
        }
 
+       usuarios.push(item)
+       let tmp = JSON.stringify(usuarios)
+       localStorage.setItem("users", tmp)
 
 });//addEventListener
