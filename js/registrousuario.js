@@ -10,7 +10,7 @@ btnRegistrar.addEventListener("click", function(e){
 
     let cont = 0;
     let password = contra.value.split("")
-    let signs = ["/", "@", "_", ":", "~", "$", "#", "*", "^", "."]
+    let signs = ["/", "@", "_", ":", "~", "$", "#", "*", "^", ".", "-"]
     signs.forEach(element => {
         if (password.includes(element)) {
             cont++;
@@ -64,6 +64,13 @@ if ((nombre.value.length>=3)
         contracof.classList.remove("is-valid");
         contracof.classList.add("is-invalid");
     } //If validacion contraseña
+
+
+    let item = {"nombre": nombre.value, 
+        "telefono": Telefono.value,
+        "email": email.value,
+        "contrasena":contra.value
+       }
 
 
 });//addEventListener
