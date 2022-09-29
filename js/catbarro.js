@@ -39,7 +39,41 @@ function addItem(div, item){
     div.innerHTML += itemHTML;
 }
 
-addItem(itemsCont1,{'id':'3001','name':'Calendario Azteca',
+
+window.addEventListener("DOMContentLoaded", function () {
+    getData();  
+  })
+  
+  
+  const getData = () =>{
+      let promise = fetch("http://127.0.0.1:5503/data.json",{
+        method:"GET"
+      });//fetch
+      promise.then( (response) => {
+              response.json().then((data)=>{
+                      console.log(data);
+                     data.forEach(element => {
+                      if (element.id.charAt(0)==3){
+                            if (element.id.charAt(3)%3==0) {
+                                  addItem(itemsCont1, element)
+                            } else if (element.id.charAt(3)%3==1){
+                                  addItem(itemsCont2, element)
+                            } else {
+                                  addItem(itemsCont3, element)
+                            }
+                      }//if alebrijes id start=1
+                      
+                    }); //forEach
+              }).catch( (error) =>{
+                console.error(error);
+            });
+        }).catch((error) =>{
+          alert("Error en la solicitud " + error);
+      });
+        
+  }//getData
+
+/* addItem(itemsCont1,{'id':'3001','name':'Calendario Azteca',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663787081/barro%20y%20cer%C3%A1mica/barroyceramica2_zdtxyq.jpg',
     'description':'Calendario Azteca tallado en Piedra con detalles en colores, perfecto para colgarse en pared. ', 'precio': '1800'});
 
@@ -77,4 +111,4 @@ addItem(itemsCont3,{'id':'3009','name':'Juego Jarra y tazas',
 
 addItem(itemsCont2,{'id':'3010','name':'Jarron para maseta',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663787080/barro%20y%20cer%C3%A1mica/barroyceramica7_fn31qo.jpg',
-    'description':'Jarron alto de ceramica, pintado en color blanco con detalle azul, diseñado para usar como maseta en exteriores o interiores.','precio':'1300'});
+    'description':'Jarron alto de ceramica, pintado en color blanco con detalle azul, diseñado para usar como maseta en exteriores o interiores.','precio':'1300'}); */
