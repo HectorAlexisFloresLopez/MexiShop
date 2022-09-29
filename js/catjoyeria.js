@@ -40,7 +40,40 @@ function addItem(div, item){
     div.innerHTML += itemHTML;
 }
 
-addItem(itemsCont1,{'id':'2001','name':'Collar agave azul',
+window.addEventListener("DOMContentLoaded", function () {
+    getData();  
+  })
+  
+  
+  const getData = () =>{
+      let promise = fetch("http://127.0.0.1:5503/data.json",{
+        method:"GET"
+      });//fetch
+      promise.then( (response) => {
+              response.json().then((data)=>{
+                      console.log(data);
+                     data.forEach(element => {
+                      if (element.id.charAt(0)==2){
+                            if (element.id.charAt(3)%3==0) {
+                                  addItem(itemsCont1, element)
+                            } else if (element.id.charAt(3)%3==1){
+                                  addItem(itemsCont2, element)
+                            } else {
+                                  addItem(itemsCont3, element)
+                            }
+                      }//if alebrijes id start=1
+                      
+                    }); //forEach
+              }).catch( (error) =>{
+                console.error(error);
+            });
+        }).catch((error) =>{
+          alert("Error en la solicitud " + error);
+      });
+        
+  }//getData
+
+/* addItem(itemsCont1,{'id':'2001','name':'Collar agave azul',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663783977/Joyeria/collar2_zmfqtc.png',
     'description':'Collar de malaquita con agave de plata y al centro una gota de ámbar de Chiapas. Plata .925. Medidas: 45 cm x 3.3 cm  x 3.6 cm.', 'precio':'5,400'
 });
@@ -97,4 +130,4 @@ addItem(itemsCont2,{'id':'2014','name':'Pulsera gotas de lluvia',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663783977/Joyeria/pulsera3_xcwmkf.png',
     'description':'Pulsera de cuatro hilos de turquesa con un equipal, una silla, jarrón de flores y al centro una fuente con flores, acompañados de tres biseles de turquesa. Plata.925. Medida total: 19 cm.', 'precio':'6,523'
 });
-
+ */

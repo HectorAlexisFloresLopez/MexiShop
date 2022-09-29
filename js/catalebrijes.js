@@ -32,7 +32,7 @@ function addItem(div, item){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn">Añadir a carrito</button>
+        <button type="button" class="btn" id="btnAgregar">Añadir a carrito</button>
       </div>
     </div>
   </div>
@@ -40,7 +40,41 @@ function addItem(div, item){
     div.innerHTML += itemHTML;
 }
 
-addItem(itemsCont1, {'id':'1001','name':'Alebrije Gato Auriazul',
+window.addEventListener("load", function () {
+  getData();  
+})
+
+
+const getData = () =>{
+    let promise = fetch("http://127.0.0.1:5503/data.json",{
+      method:"GET"
+    });//fetch
+    promise.then( (response) => {
+            response.json().then((data)=>{
+                    console.log(data);
+                   data.forEach(element => {
+                    if (element.id.charAt(0)==1){
+                          if (element.id.charAt(3)%3==0) {
+                                addItem(itemsCont1, element)
+                          } else if (element.id.charAt(3)%3==1){
+                                addItem(itemsCont2, element)
+                          } else {
+                                addItem(itemsCont3, element)
+                          }
+                    }//if alebrijes id start=1
+                    
+                  }); //forEach
+            }).catch( (error) =>{
+              console.error(error);
+          });
+      }).catch((error) =>{
+        alert("Error en la solicitud " + error);
+    });
+      
+}//getData
+
+
+/* addItem(itemsCont1, {'id':'1001','name':'Alebrije Gato Auriazul',
     'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663790867/Alebrijes/alebrije12_gbruhd.jpg',
     'description':'Pieza de cerámica representativa de artesanos Oaxaqueños, decorada destacando los colores verde, azul, rosa, blanco, negro, naranja. Mide 80 cm. de alto. Peso: 5kg.',
     'precio':'16,700'
@@ -80,4 +114,4 @@ addItem(itemsCont3, {'id':'1009','name':'Dragón Atardecer',
 
 addItem(itemsCont3, {'id':'1010','name':'Jaguar Atardecer',
 'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663788479/Alebrijes/alebrije10_etlze0.jpg',
-'description':'Jaguar multicolor, un atardecer para que puedas deleitarte. Altura:40 cm. Peso: 4.800 kg', 'precio':'26,400'});
+'description':'Jaguar multicolor, un atardecer para que puedas deleitarte. Altura:40 cm. Peso: 4.800 kg', 'precio':'26,400'}); */
