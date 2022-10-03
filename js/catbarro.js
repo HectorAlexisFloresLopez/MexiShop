@@ -76,6 +76,7 @@ window.addEventListener("DOMContentLoaded", function () {
         
   }//getData
 
+
   itemsCont1.addEventListener("click", function(e){
     e.preventDefault();
     add(e);
