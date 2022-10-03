@@ -163,6 +163,15 @@ margin-top: 5px;
             box-shadow: 0px 4px 4px;
             font-family: 'Carrois Gothic SC', sans-serif;
         }
+      
+        @media (max-width: 440px) {
+            .container h2{
+              width: 80%;
+              margin-left: 10%;
+              margin-right: 10%;
+            }          
+        }
+
         .col h3{
             text-align: center;
             background-color: #C2943F;
@@ -183,6 +192,14 @@ margin-top: 5px;
             box-shadow: 0px 4px 4px; 
             margin-top: 5%;
             font-family: 'Carrois Gothic SC', sans-serif;
+        }
+
+        @media (max-width:990px){
+            .row h3 {
+              width: 80%;
+              margin-left: 10%;
+              margin-right: 10%;
+            }
         }
 
         .fotoartesano{
@@ -206,6 +223,9 @@ margin-top: 5px;
             }
         }
 
+        h1{
+          margin: 2%;
+        }
          /*estilos del footer*/
  footer{
     height: 70px;
@@ -283,3 +303,15 @@ margin-top: 5px;
       font-size: 12px;
     }
   }
+
+  /*card-body*/
+
+  .card{
+    background-color: #282F36;
+    color: #FFFFFF;
+    margin-bottom: 6%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #C2943F;
+  }
+
+

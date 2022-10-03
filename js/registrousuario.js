@@ -11,6 +11,7 @@ let usuarios = []
 btnRegistrar.addEventListener("click", function(e){
      e.preventDefault();
 
+
     let cont = 0;
     let password = contra.value.split("")
     let signs = ["/", "@", "_", ":", "~", "$", "#", "*", "^", ".", "-"]
