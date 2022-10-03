@@ -145,12 +145,6 @@ if(localStorage.getItem("carrito")){
           <td>${prod.nombre}</td>
           <td>${prod.cantidad}</td>
           <td>$ ${prod.precio*prod.cantidad}</td>
-        </tr>
-        <tr>
-          <th class="table-active" scope="row">TOTAL</th>
-          <td class="table-active"> </td>
-          <td class="table-active"> </td>
-          <td class="table-active">$ ${suma}</td>
         </tr>`
     });
 }
