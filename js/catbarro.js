@@ -76,5 +76,5 @@ addItem(itemsCont3,{'id':'3009','name':'Juego Jarra y tazas',
     'description':'Juego de 4 tazas con jarra, realizadas en ceramica negra, medida de jarra 2.0Lt y tamaño de tazas 255ml.','precio':'1900'});
 
 addItem(itemsCont2,{'id':'3010','name':'Jarron para maseta',
-    'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663787080/barro%20y%20cer%C3%A1mica/barroyceramica7_fn31qo.jpg',
+    'img':'https://res.cloudinary.com/dozr3yk7l/image/upload/v1663787080/barro%20y%20cer%C3%A1mica/barroyceramica5_viuiaj.jpg',
     'description':'Jarron alto de ceramica, pintado en color blanco con detalle azul, diseñado para usar como maseta en exteriores o interiores.','precio':'1300'});
