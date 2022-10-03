@@ -2,7 +2,7 @@ let email = document.getElementById("email")
 let password = document.getElementById("contra")
 let button = document.getElementById("btnSubmit")
 
-cont=0
+let arr=[]
 
 button.addEventListener("click", function (e) {
     e.preventDefault();
@@ -23,6 +23,14 @@ button.addEventListener("click", function (e) {
         ) {
         cont++;
     }
+    let tmp=JSON.parse(localStorage.getItem("users")) 
+        tmp.forEach(element => {
+        if ((element.email==email.value) && (element.contrasena==password.value)) {
+            console.log((element.email==email.value) && (element.contrasena==password.value))
+            //Aqui se reedirecciona
+        }
+    });
+
 })
 
 
