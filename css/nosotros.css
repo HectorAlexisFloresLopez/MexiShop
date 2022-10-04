@@ -1,7 +1,7 @@
 /* Estilos de Imágenes del equipo*/
 
 .box{
-  width: 1200px;
+  width: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 15px;
@@ -26,7 +26,7 @@
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  background: #fff;
+  background: #ddd;
   transition: 0.5s;
   z-index:-1;
 }
@@ -82,8 +82,7 @@ z-index: 1;
 } 
 
 .card .details h4 span{
-font-weight: 500;
-font-size: 16px;
+font-size: 12px;
 color: #e8af4e;
 display: block;
 margin-top: 5px;
@@ -309,7 +308,7 @@ margin-top: 5px;
   .card{
     background-color: #282F36;
     color: #FFFFFF;
-    margin-bottom: 6%;
+    margin-bottom: 30%;
     border-radius: 20px;
     box-shadow: 0px 4px 4px #C2943F;
   }
