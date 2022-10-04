@@ -14,7 +14,7 @@
   
   /*Body*/
   body {     
-    background-image: url(../src/backgroundlogin.png) !important;  
+    background-image: url(../src/FondoEdit.png) !important;  
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,9 +213,9 @@
   .text-input {
     padding: 0.8rem;
     width: 100%;
-    height: 100%;
+    height: 70%;
     border: 2px solid var(--azul);
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
     border-radius: 5px;
     font-size: 18px;
     outline: none;
@@ -233,6 +233,7 @@
     font-size: 16px;
     opacity: 0.5;
     transition: all 0.3s;
+    color: #E8AF4E;
   }
   .text-input:focus::placeholder {
     opacity: 1;

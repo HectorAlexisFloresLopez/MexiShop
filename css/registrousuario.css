@@ -198,7 +198,6 @@ color: #ffffff;
 .col-sm-3 .description button{
 background-color: #e8af4e;
 color: #282F36;
-width: 150px;
 padding: 12px;
 border-radius: 8px;
 }
@@ -225,10 +224,11 @@ body .row .col-sm-2{
 
 .input-container button{
 display: flex;
-justify-content: right;
+justify-content: left;
 height: 40px;
 background-color: #c2943f !important;
 color: #282F36 !important;
+border: none;
 }
 
 
@@ -239,11 +239,11 @@ color: #282F36 !important;
   justify-content: right;
 }
 
+
 .text-input {
-  padding: 0.8rem;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--azul);
+  padding: 0.3rem;
+  width: 400px;
+  height: 80%;
   background: rgba(0, 0, 0, 0.7) !important;
   border-radius: 5px;
   font-size: 18px;
@@ -253,6 +253,7 @@ color: #282F36 !important;
   border: 2px solid var(--dorado);
 }
 
+
 .text-input:focus {
   border: 4px solid var(--dorado);
 }
@@ -261,6 +262,7 @@ color: #282F36 !important;
   font-size: 16px;
   opacity: 0.5;
   transition: all 0.3s;
+  color: #e8af4e;
 }
 .text-input:focus::placeholder {
   opacity: 1;
