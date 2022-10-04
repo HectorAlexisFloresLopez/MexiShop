@@ -41,9 +41,6 @@ const getData = () =>{
 
 function addItem(div, item){
     const itemHTML = `<div class="card" style="width: 18rem;">
-            <div class="card-header">
-                <strong>Los más vendidos</strong>
-            </div>
             <img src="${item.img}" class="card-img-top" alt="image">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5> 
@@ -72,7 +69,6 @@ function addItem(div, item){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn">Añadir a carrito</button>
       </div>
     </div>
   </div>
