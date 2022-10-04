@@ -11,13 +11,6 @@ let usuarios = []
 btnRegistrar.addEventListener("click", function(e){
      e.preventDefault();
 
-     Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href="">Why do I have this issue?</a>'
-      })
-
     let cont = 0;
     let password = contra.value.split("")
     let signs = ["/", "@", "_", ":", "~", "$", "#", "*", "^", ".", "-"]
@@ -28,6 +21,9 @@ btnRegistrar.addEventListener("click", function(e){
     });
 
 //Validadciones
+
+
+
 if ((nombre.value.length>=3) 
         && 
         (isNaN(nombre.value))

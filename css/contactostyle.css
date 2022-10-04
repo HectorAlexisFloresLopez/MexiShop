@@ -8,10 +8,42 @@
   --dorado: #c2943f;
   --amarillo: #e8af4e;
   --blanco: #ffffff;
+ }
+.portada_contacto {
+  background-color: #282F36;
+  border-radius: 15px;  
+  box-shadow: 0px 4px 4px;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  width: 370px;
+  font-size: 32px;
+  text-align: center;
+  padding: 15px;
+  color: #C2943F;
 }
+
+.row .col-sm-6{
+  background: rgba(0, 0, 0, 0.7) !important;
+  padding: 10px;
+  padding-top: 20px;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: space-between;
+
+}
+
+.col-sm-6 .texto{
+display: flex;
+color: #ffffff;
+}
+
 .contacto {
+  background-image: url(../src/backgroundcontacto.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-backface-visibility: var(--blanco);
   width: 90%; 
-  padding: 10% 0%;
+  padding: 25px;
   margin: auto;
 }  
 
