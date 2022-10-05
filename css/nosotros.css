@@ -45,13 +45,13 @@ left: 10px;
 bottom: 10px;
 right: 10px;
 background: #222;
-transition: 0.5s;
+transition: 0.9s;
 z-index: 1;
 }
 
 .card:hover .imgBx
 {
-  bottom: 80px;
+  bottom: 500px;
 }
 
 .card .imgBx img{
@@ -68,7 +68,7 @@ z-index: 1;
     left: 10px;
     right: 10px;
     bottom: 10px;
-    height: 60px;
+    height: 300px;
     text-align: center;
 }
 
@@ -82,11 +82,29 @@ z-index: 1;
 } 
 
 .card .details h4 span{
-font-size: 12px;
+font-size: 15px;
 color: #e8af4e;
 display: block;
 margin-top: 5px;
  } 
+
+ #descripcion {
+  font-size: 14px;
+ }
+
+ #linkedin {
+  width: 40px;
+ }
+
+#git {
+  width: 45px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 
         /* New Nav bootstrap*/
 * {
