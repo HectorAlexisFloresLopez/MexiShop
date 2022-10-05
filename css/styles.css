@@ -55,3 +55,18 @@ background-color: #c2943f;
 font-size: 20px;
 font-family: 'Carrois Gothic SC', sans-serif;
 }
+
+#hero {
+  background-image: url("https://res.cloudinary.com/pixel-direction/image/upload/v1664832077/MEXISHOP/artesanias_hoqs72.webp");
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 500px;
+  color: rgb(255, 255, 255);
+}
+#hero1 {
+  background-image: url("https://res.cloudinary.com/pixel-direction/image/upload/v1664833412/MEXISHOP/Buscar-un-socio-consejos.jpg_csfx3j.webp");
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 500px;
+  color: rgb(255, 255, 255);
+}

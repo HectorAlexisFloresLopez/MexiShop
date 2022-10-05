@@ -76,6 +76,7 @@ window.addEventListener("DOMContentLoaded", function () {
         
   }//getData
 
+
   itemsCont1.addEventListener("click", function(e){
     e.preventDefault();
     add(e);
@@ -112,7 +113,13 @@ window.addEventListener("DOMContentLoaded", function () {
                 }
             })            
         }
-  
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Tu compra se ha añadido a carrito',
+          showConfirmButton: false,
+          timer: 1500
+        })
           compra.push(item)
           
           localStorage.setItem("carrito", JSON.stringify(compra))

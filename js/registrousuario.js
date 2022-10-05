@@ -4,8 +4,15 @@ let email = document.getElementById("email");
 let contra = document.getElementById("contra");
 let contracof = document.getElementById("contraconf");
 let btnRegistrar = document.getElementById("btnSubmit");
+let btnLink = document.getElementById("login")
 
 let usuarios = []
+
+btnLink.addEventListener("click", function (i) {
+    i.preventDefault();
+
+    window.location.assign("http://127.0.0.1:5503/pages/login.html")
+});
 
 
 btnRegistrar.addEventListener("click", function(e){
