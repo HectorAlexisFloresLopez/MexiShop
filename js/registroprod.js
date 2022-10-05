@@ -137,6 +137,15 @@ let item = {"id":"",
             
         });
     }//if de validacion
+    else{
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Por favor, ingrese los datos completos y correctos de nuevo',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
 
     
 

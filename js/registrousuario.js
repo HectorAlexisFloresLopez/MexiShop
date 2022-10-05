@@ -18,7 +18,6 @@ btnLink.addEventListener("click", function (i) {
 btnRegistrar.addEventListener("click", function(e){
      e.preventDefault();
 
-
     let cont = 0;
     let password = contra.value.split("")
     let signs = ["/", "@", "_", ":", "~", "$", "#", "*", "^", ".", "-"]
@@ -29,6 +28,9 @@ btnRegistrar.addEventListener("click", function(e){
     });
 
 //Validadciones
+
+
+
 if ((nombre.value.length>=3) 
         && 
         (isNaN(nombre.value))
@@ -111,7 +113,7 @@ if ((nombre.value.length>=3)
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: 'Hay un error en tus datos',
+            title: 'Por favor, ingrese los datos completos y correctos de nuevo',
             showConfirmButton: false,
             timer: 1500
           })
