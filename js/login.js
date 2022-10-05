@@ -50,6 +50,15 @@ button.addEventListener("click", function (e) {
                 timer: 1500
               })
         })
+    } else{
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Por favor, ingrese los datos completos y correctos de nuevo',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
     }
 })
 
