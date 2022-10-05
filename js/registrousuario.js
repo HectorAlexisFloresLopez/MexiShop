@@ -76,6 +76,27 @@ if ((nombre.value.length>=3)
         contracof.classList.add("is-invalid");
     } //If validacion contraseña
 
+    if ((nombre.value.length>=3) 
+        && 
+        (isNaN(nombre.value))
+        &&
+        (email.value.length >=12)
+        &&
+        (Telefono.value.length >=10)
+        &&
+        (contra.value==contracof.value) 
+        && 
+        (cont>0)
+        &&
+        (contra.value.length >=8)
+    ){
+    Swal.fire({
+        position: 'center-start',
+        icon: 'success',
+        title: 'Registro exitoso',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
     let item = {"nombre": nombre.value, 
         "telefono": Telefono.value,
@@ -86,5 +107,13 @@ if ((nombre.value.length>=3)
        usuarios.push(item)
        let tmp = JSON.stringify(usuarios)
        localStorage.setItem("users", tmp)
-
+    } else {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Hay un error en tus datos',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
 });//addEventListener

@@ -1,5 +1,6 @@
 const tabla = document.getElementById("tabla");
 let tarjeta = document.getElementById("prod");
+let total = document.getElementById("total")
 let compra=[];
 let suma = 0;
 
@@ -142,6 +143,10 @@ if(localStorage.getItem("carrito")){
           <td>${prod.cantidad}</td>
           <td>$ ${prod.precio*prod.cantidad}</td>
         </tr>`
+      suma+=prod.precio*prod.cantidad
     });
 }
 
+total.innerHTML+=`<div class="alert alert-info" role="alert">
+Total de compra:  ${suma}
+</div>`
