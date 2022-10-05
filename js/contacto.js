@@ -73,6 +73,14 @@ btnEnviar.addEventListener("click", function(e){
         && 
         (mensaje.value.length <=140)
     ) {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Hay un error en tus datos',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "mexishopgeneration@gmail.com",

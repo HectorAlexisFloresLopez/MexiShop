@@ -111,7 +111,13 @@ let item = {"id":"",
         &&
         (comment.value.length >=30)) {
         //mandar información a localstorage
-
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se ha añadido producto a la lista',
+            showConfirmButton: false,
+            timer: 1500
+          })
     
     inventario.push(item)
     localStorage.setItem("catalogo", JSON.stringify(inventario))

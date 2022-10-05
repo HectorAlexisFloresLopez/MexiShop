@@ -235,14 +235,14 @@ border: none;
 .input-container{
   display: flex;
   justify-content: space-between;
-  padding: 0px;
+  padding: 10px;
   justify-content: right;
 }
 
 
 .text-input {
   padding: 0.3rem;
-  width: 400px;
+  width: 50%;
   height: 80%;
   background: rgba(0, 0, 0, 0.7) !important;
   border-radius: 5px;
@@ -266,4 +266,8 @@ border: none;
 }
 .text-input:focus::placeholder {
   opacity: 1;
+}
+
+.invalid-feedback{
+  width: 20%;
 }
