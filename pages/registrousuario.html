@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="../css/registrousuario.css">
     <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-</head>
-
     <title>Registro de Usuario</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/pixel-direction/image/upload/v1664937605/MEXISHOP/as_xuez7v.jpg">
 </head>
   <body>
     <header>
@@ -58,7 +55,7 @@
     </div>
     </header>
         <div class="registerop">
-            <button type="button" class="btn btn-lg" id="login">Log In</button>
+            <button type="button" class="btn btn-lg" id="login">Iniciar Sesión</button>
             <button type="button" class="btn btn-lg" id="registro">Registrarme</button>
         </div>
         <section class="container">
@@ -87,10 +84,10 @@
                 <!-- FORMULARIO-->
                 <form class="col-md-8"> 
                   <div class="input-container">
-                      <label>Nombre:<br> 
+                      <label>Nombre:<br>
                       <input type="text" id="nombre" class="text-input" autocomplete="off" placeholder="Escribe tu nombre completo" required />
-                    </label>
-                      <div class="invalid-feedback">
+                      </label>
+                      <div class="invalid-feedback alert alert-warning" role="alert">
                         Por favor, escriba su nombre completo
                       </div>
                   </div>
@@ -99,7 +96,7 @@
                     <label>Teléfono: <br>
                       <input type="tel" id="Telefono" class="text-input" autocomplete="off" placeholder="Escribe tu teléfono"
                       required /></label>
-                      <div class="invalid-feedback">
+                      <div class="invalid-feedback alert alert-warning" role="alert">
                         Por favor, proporcione un número telefónico válido
                       </div>
                   </div>
@@ -108,7 +105,7 @@
                     <label>Correo Electronico: <br>
                     <input type="email" id="email" class="text-input" autocomplete="off" placeholder="Escribe tu email" required />
                   </label>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback alert alert-warning" role="alert">
                       Por favor, proporcione un correo electrónico válido
                     </div>
                   </div>
@@ -118,7 +115,7 @@
                       <input type="password" id="contra" class="text-input" autocomplete="off" placeholder="Crea tu contraseña"
                       required />
                     </label>
-                      <div class="invalid-feedback">
+                      <div class="invalid-feedback alert alert-warning" role="alert">
                         Por favor, proporcione una contraseña segura
                       </div>
                   </div>
@@ -128,7 +125,7 @@
                     <input type="password" id="contraconf" class="text-input" autocomplete="off" placeholder="Verifica tu contraseña"
                     required />
                   </label>
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback alert alert-warning col" role="alert">
                       Por favor, valide su contraseña de nuevo
                     </div>
                 </div>
@@ -169,7 +166,8 @@
        
     </footer>
 
-    <script src="../js/registrousuario.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/registrousuario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   </body>

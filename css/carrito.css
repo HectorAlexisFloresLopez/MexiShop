@@ -215,3 +215,9 @@ main .container{
   color: #E8AF4E;
   justify-content: center;
 }
+
+/*   Estilos total de compra*/
+
+.alert-info{
+  margin-left: 80%;
+}
