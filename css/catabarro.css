@@ -1,58 +1,69 @@
-  /* New Nav bootstrap*/
-  * {
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Carrois Gothic SC', sans-serif;
-  }
+     /* New Nav bootstrap*/
+     * {
+      margin: 0%;
+      padding: 0%;
+      font-family: 'Carrois Gothic SC', sans-serif;
+    }
 
-  h1{
-    margin: 2%;
-  }
-  
-  .menu-bar {
-     background-color: #282f36;
-     
-  }
-  .nav-link {
-     font-size: 16px;
-     margin: 5px;
-     color: #e8af4e!important;
-     font-weight: 500;
-  }
-  
-  .navbar-nav {
-     text-align: right;
-     margin-right: 20px;
-  }
-  
-  .menu-bar .navbar-toggler {
-     padding-right: 20px;
-     outline: none!important;
-     border: none!important;
-     color: #e8af4e;
-  }
-  
-  .navbar .fa {
-     color: #e8af4e;
-     font-size: 26px;
-  }
-  
-  
-  .nav-link:hover {
-     font-weight: 600;
-     border-bottom: 1px solid #e8af4e;
-  }
-  
-  .navbar-brand img{
-     width: 80px;
-     margin-top: 5px;
-     margin-left: 20px;
-  }
-  @media only screen and (max-width: 1000px) {
-     .nav-link:hover {
-         border-bottom: none!important;
-     }
-  }
+    h1{
+      margin: 2%;
+    }
+    
+    .menu-bar {
+       background-color: #282f36;
+       
+    }
+    .nav-link {
+       font-size: 16px;
+       margin: 5px;
+       color: #e8af4e!important;
+       font-weight: 500;
+    }
+    
+    .navbar-nav {
+       text-align: right;
+       margin-right: 20px;
+    }
+    
+    .menu-bar .navbar-toggler {
+       padding-right: 20px;
+       outline: none!important;
+       border: none!important;
+       color: #e8af4e;
+    }
+    
+    .navbar .fa {
+       color: #e8af4e;
+       font-size: 26px;
+    }
+    
+    
+    .nav-link:hover {
+       font-weight: 600;
+       border-bottom: 1px solid #e8af4e;
+    }
+    
+    .navbar-brand img{
+       width: 80px;
+       margin-top: 5px;
+       margin-left: 20px;
+    }
+
+    .dropdown-menu {
+      background-color: #282F36;
+    
+    }
+    
+    .dropdown-item {
+      color: #C2943F !important; 
+      font-family: 'Carrois Gothic SC', sans-serif;
+    
+    }
+    @media only screen and (max-width: 1000px) {
+       .nav-link:hover {
+           border-bottom: none!important;
+       }
+    }
 
           /*estilos del footer*/
 footer{
