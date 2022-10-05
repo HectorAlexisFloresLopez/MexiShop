@@ -73,13 +73,7 @@ btnEnviar.addEventListener("click", function(e){
         && 
         (mensaje.value.length <=140)
     ) {
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Hay un error en tus datos',
-            showConfirmButton: false,
-            timer: 1500
-          })
+        
 
         Email.send({
             Host : "smtp.elasticemail.com",
@@ -97,7 +91,22 @@ btnEnviar.addEventListener("click", function(e){
             `
         }).then(
         message => alert(message)
-        );          
+        ); 
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'SOLICITUD ENVIADA. NOS COMUNICAREMOS A LA BREVEDAD.',
+            showConfirmButton: false,
+            timer: 1500
+          })         
+    } else{
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Por favor, verifica la informacion otorgada.',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
     
 

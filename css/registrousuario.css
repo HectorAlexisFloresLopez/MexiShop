@@ -160,11 +160,11 @@ color: #c2943f !important;
 body .row{
   display: flex;
   justify-content: space-around;
-  padding-bottom: 60px;
+  padding-bottom: 130px;
   text-align: center;
 }
 
-body .row .col-sm-3{
+body .row .col-sm-4{
   background-image: url(/src/snakeregistro.png) ;
   background-size:contain;
   background-position:center;
@@ -174,7 +174,7 @@ body .row .col-sm-3{
   size: 30cm;
 }
 
-.col-sm-3 .description{
+.col-sm-4 .description{
 background: rgba(0, 0, 0, 0.6);
 border-radius: 15px;
 }
@@ -219,7 +219,7 @@ border: none;
   display: flex;
   justify-content: space-between;
   padding: 0px;
-  justify-content: right;
+  justify-content: center;
 }
 
 
@@ -234,6 +234,7 @@ border: none;
   transition: all 0.3s;
   color: #c2943f;
   border: 2px solid var(--dorado);
+  justify-content: left;
 }
 
 
@@ -252,5 +253,13 @@ border: none;
 }
 
 .invalid-feedback{
-  width: 20px;
+  width: 300px;
+  height: 60px;
+  justify-content: center;
+  float: center;
+}
+.valid-feedback{
+
+  justify-content: center;
+  float: center;
 }
