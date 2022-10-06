@@ -220,4 +220,8 @@ main .container{
 
 .alert-info{
   margin-left: 80%;
+  background-color: #282F36;
+  color: #E8AF4E;
+  border: none;
+
 }
