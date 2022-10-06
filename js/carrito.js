@@ -148,5 +148,5 @@ if(localStorage.getItem("carrito")){
 }
 
 total.innerHTML+=`<div class="alert alert-info" role="alert">
-Total de compra:  ${suma/2}
+Total de compra:   $${suma/2}
 </div>`
