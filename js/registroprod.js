@@ -116,7 +116,9 @@ let item = {"id":"",
             icon: 'success',
             title: 'Se ha añadido producto a la lista',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
           })
     
     inventario.push(item)
@@ -143,7 +145,9 @@ let item = {"id":"",
             icon: 'error',
             title: 'Por favor, ingrese los datos completos y correctos de nuevo',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
           })
     }
 

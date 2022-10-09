@@ -54,6 +54,17 @@
          }
       }
 
+      .dropdown-menu {
+        background-color: #282F36;
+      
+      }
+      
+      .dropdown-item {
+        color: #C2943F !important; 
+        font-family: 'Carrois Gothic SC', sans-serif;
+      
+      }
+
               /*estilos del footer*/
  footer{
     height: 70px;

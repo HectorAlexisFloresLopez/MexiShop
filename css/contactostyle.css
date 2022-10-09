@@ -41,7 +41,7 @@ color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  -webkit-backface-visibility: var(--blanco);
+/*   -webkit-backface-visibility: var(--blanco); */
   width: 90%; 
   padding: 25px;
   margin: auto;
