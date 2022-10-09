@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
 /*        Función para obtener información del json                */
 
 const getData = () =>{
-    let promise = fetch("http://127.0.0.1:5503/data.json",{
+    let promise = fetch("http://127.0.0.1:5500/data.json",{
       method:"GET"
     });//fetch
     promise.then( (response) => {

@@ -35,7 +35,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20cm;
-    -webkit-backface-visibility: var(--blanco);
+/*     -webkit-backface-visibility: var(--blanco); */
     width: 90%; 
     padding: 25px;
     margin: auto;

@@ -90,22 +90,26 @@ btnEnviar.addEventListener("click", function(e){
             Teléfono de contacto: ${tlf.value}
             `
         }).then(
-        message => alert(message)
-        ); 
-        Swal.fire({
+        message =>        Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'SOLICITUD ENVIADA. NOS COMUNICAREMOS A LA BREVEDAD.',
+            title: 'SOLICITUD ENVIADA. NOS COMUNICAREMOS A LA BREVEDAD. ' + message,
             showConfirmButton: false,
-            timer: 1500
-          })         
+            timer: 2000,
+            background: '#282F36', 
+            color: '#C2943F'
+          }) 
+        ); 
+         
     } else{
         Swal.fire({
             position: 'center',
             icon: 'error',
             title: 'Por favor, verifica la informacion otorgada.',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
           })
     }
     

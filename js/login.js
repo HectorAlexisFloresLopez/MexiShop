@@ -9,7 +9,7 @@ let flag =0;
 btnLink.addEventListener("click", function (i) {
     i.preventDefault();
 
-    window.location.assign("http://127.0.0.1:5503/pages/registrousuario.html")
+    window.location.assign("http://127.0.0.1:5500/pages/registrousuario.html")
 });
 
 button.addEventListener("click", function (e) {
@@ -31,23 +31,25 @@ button.addEventListener("click", function (e) {
         email.classList.remove("is-invalid")
     }
 
-  
+    if (localStorage.getItem("users")) {
     let tmp=JSON.parse(localStorage.getItem("users")) 
         tmp.forEach(element => {
         if ((element.email==email.value) && (element.contrasena==password.value)) {
  
               flag++;
         }
-    });
+    });//forEach
     if (flag>0) {
-        setTimeout(window.location.assign("http://127.0.0.1:5503/index.html"),8000)
+        setTimeout(window.location.assign("http://127.0.0.1:5500/index.html"),8000)
         window.addEventListener("load", function(){
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Has accedido a tu cuenta',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1500,
+                background: '#282F36', 
+                color: '#C2943F'
               })
         })
     } else{
@@ -56,10 +58,24 @@ button.addEventListener("click", function (e) {
             icon: 'error',
             title: 'Por favor, ingrese los datos completos y correctos de nuevo',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
           })
 
     }
-})
+
+    }else{
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Usuario no registrado',
+            showConfirmButton: false,
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
+          })
+    }
+})//addEventListener
 
 

@@ -11,7 +11,7 @@ let usuarios = []
 btnLink.addEventListener("click", function (i) {
     i.preventDefault();
 
-    window.location.assign("http://127.0.0.1:5503/pages/login.html")
+    window.location.assign("http://127.0.0.1:5500/pages/login.html")
 });
 
 
@@ -97,7 +97,10 @@ if ((nombre.value.length>=3)
         icon: 'success',
         title: 'Registro exitoso',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
+        background: '#282F36', 
+        color: '#C2943F'
+        
       })
 
     let item = {"nombre": nombre.value, 
@@ -115,7 +118,9 @@ if ((nombre.value.length>=3)
             icon: 'error',
             title: 'Por favor, ingrese los datos completos y correctos de nuevo',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            background: '#282F36', 
+            color: '#C2943F'
           })
     }
 });//addEventListener

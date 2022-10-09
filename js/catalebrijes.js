@@ -49,7 +49,7 @@ window.addEventListener("load", function () {
 
 
 const getData = () =>{
-    let promise = fetch("http://127.0.0.1:5503/data.json",{
+    let promise = fetch("http://127.0.0.1:5500/data.json",{
       method:"GET"
     });//fetch
     promise.then( (response) => {
@@ -71,7 +71,7 @@ const getData = () =>{
               console.error(error);
           });
       }).catch((error) =>{
-        alert("Error en la solicitud " + error);
+        console.error("Error en la solicitud " + error);
     });
       
 }//getData
@@ -118,7 +118,9 @@ function add(e) {
         icon: 'success',
         title: 'Tu compra se ha añadido a carrito',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
+        background: '#282F36', 
+        color: '#C2943F'
       })
         compra.push(item)
         
