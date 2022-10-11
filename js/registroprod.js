@@ -6,7 +6,10 @@
     let cost = document.getElementById("precio");
     let comment = document.getElementById("comentarios");
     let btnagregar = document.getElementById("btnSubmit");
+    let preview = document.getElementById("Preview");
+    let btnPreview = document.getElementById("btnMostrar");
 
+    /*  Titulo de tabla */
     tabla.innerHTML += `<thead class="thead-dark">
     <tr>
       <th scope="col">ID</th>
@@ -17,7 +20,64 @@
     </tr>
   </thead>`
 
+//Arreglo Inicial
     let inventario = [];
+
+    //Función para añadir elemento en una card
+
+    function showItem(div, item){
+        const itemHTML = `<div class="card" style="width: 18rem;">
+                <img src="${item.img}" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5> 
+                    <p class="card-text">${item.description.slice(0,20)}...<br>
+                    <strong>$ ${item.precio} (MXN)</strong></p>   
+                    <button type="button" class="btn" data-toggle="modal" data-target="#modalItem_${item.id}">
+                    Ver más 
+                    </button>
+                    <a href="#" class="btn btnDelete">Eliminar</a> 
+                </div> 
+            </div> 
+            <br/>
+            <!-- Modal -->
+    <div class="modal fade" id="modalItem_${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">${item.name}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        ${item.description}
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+        </div>
+        </div>
+    </div>
+    </div>`
+        div.innerHTML += itemHTML;
+    }//addItem
+
+    //Vista previa de producto
+    preview.addEventListener("click", function(e){
+        e.preventDefault();
+        removeItem(e)
+    });//Card addEventListener
+
+    function removeItem(e) {
+        if(e.target.classList.contains("btnDelete")) {
+            preview.style.display="none"
+            id.value=null
+            nameprod.value=null
+            img.value=null
+            comment.value=null
+            cost.value=null
+        }
+    }//removeItem
+
     if (localStorage.getItem("catalogo")) {
         let tmp = JSON.parse(localStorage.getItem("catalogo"))
         tmp.forEach(element => {
@@ -32,7 +92,18 @@
             
         });
         
-    }
+    }//if catalogo tiene elementos en localStorage 
+
+    btnPreview.addEventListener("click", function(e){
+        e.preventDefault();
+        let item = {"id":`${id.value}`, 
+        "name":`${nameprod.value}`,
+        "img": `${img.value}`,
+        "description":`${comment.value}`,
+        "precio": `${cost.value}`
+       }
+        showItem(preview, item)
+    }); //btnPreview
 
 btnagregar.addEventListener("click", function(e) {
     e.preventDefault();
@@ -135,7 +206,12 @@ let item = {"id":"",
               <td>${element.description}</td>
             </tr>`
         
-       
+            preview.style.display="none"
+            id.value=null
+            nameprod.value=null
+            img.value=null
+            comment.value=null
+            cost.value=null
             
         });
     }//if de validacion

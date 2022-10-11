@@ -117,7 +117,9 @@ window.addEventListener("DOMContentLoaded", function () {
           icon: 'success',
           title: 'Tu compra se ha añadido a carrito',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
+          background: '#282F36', 
+          color: '#C2943F'
         })
           compra.push(item)
           
