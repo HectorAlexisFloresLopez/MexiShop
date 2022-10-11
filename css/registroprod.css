@@ -212,6 +212,10 @@
   box-shadow: 0px 2px 2px rgb(219, 219, 219);
   margin-bottom: 3%;
   }
+  .card p{
+    border-color: #FFFFFF;
+    color: #000000;
+    }
   
   .card:hover{
       box-shadow: 4px 4px 4px rgb(219, 219, 219);
@@ -231,3 +235,13 @@
   section{
     justify-content: center;
   }
+
+  div #Preview{
+    display: flex;
+    justify-content: center !important;
+    justify-items: center !important;
+    color: #000000;
+    }
+    section{
+      color: #FFFFFF !important;
+    }
