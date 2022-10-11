@@ -1,6 +1,6 @@
 const tabla = document.getElementById("tabla");
 let tarjeta = document.getElementById("prod");
-let total = document.getElementById("total")
+let total = document.getElementById("total");
 let compra=[];
 let suma = 0;
 
@@ -124,10 +124,11 @@ tabla.innerHTML += ` <thead>
   <th scope="col">Nombre</th>
   <th scope="col">Cantidad</th>
   <th scope="col">Precio</th>
+  <th scope="col"></th>
 </tr>
 </thead>`
 
-if (!localStorage.getItem("carrito")) {
+if ((!localStorage.getItem("carrito")) || (JSON.parse(localStorage.getItem("carrito")).length==0)) {
     tabla.innerHTML += `
     <th scope="row">¡No has añadido nada a tu carrito!</th>`
 } 
@@ -142,6 +143,7 @@ if(localStorage.getItem("carrito")){
           <td>${prod.nombre}</td>
           <td>${prod.cantidad}</td>
           <td>$ ${prod.precio*prod.cantidad}</td>
+          <td><button type="button" class="btn btnQuitar">Quitar</button></td>
         </tr>`
       suma+=prod.precio*prod.cantidad
     });
@@ -150,3 +152,29 @@ if(localStorage.getItem("carrito")){
 total.innerHTML+=`<div class="alert alert-info" role="alert">
 Total de compra:   $${suma/2}
 </div>`
+
+//Eliminar  producto
+
+tabla.addEventListener("click", function (e) {
+  e.preventDefault();
+  deleteProd(e)
+  
+})
+
+function deleteProd(e) {
+  if (e.target.classList.contains("btnQuitar")){
+    let row = e.target.parentElement.parentElement;
+    let prod_id =row.querySelector("th").textContent 
+    let temporal = JSON.parse(localStorage.getItem("carrito"))
+    temporal.forEach(element => {
+        if (element.id == prod_id){
+            let ind = temporal.indexOf(element)
+            temporal.splice(ind,1);
+            localStorage.setItem("carrito", JSON.stringify(temporal))
+        }//eliminar elemento
+    });//forEach
+    location.reload();
+  }//if para identificar botón  
+}//función deleteProd
+
+console.log(JSON.parse(localStorage.getItem("carrito")).length==0);
