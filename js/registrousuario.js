@@ -99,9 +99,12 @@ if ((nombre.value.length>=3)
         showConfirmButton: false,
         timer: 1500,
         background: '#282F36', 
-        color: '#C2943F'
-        
-      })
+        color: '#C2943F',    
+          })
+
+
+    
+  
 
     let item = {"nombre": nombre.value, 
         "telefono": Telefono.value,
