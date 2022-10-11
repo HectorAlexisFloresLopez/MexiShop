@@ -242,6 +242,11 @@
     justify-items: center !important;
     color: #000000;
     }
+    
     section{
       color: #FFFFFF !important;
     }
+
+td .size{
+  width: 100px;
+}
