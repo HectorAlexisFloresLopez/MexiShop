@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `mexishop2db`.`producto` (
   `product_id` INT NOT NULL,
   `prod_nombr` VARCHAR(100) NOT NULL,
   `prod_link` VARCHAR(100) NOT NULL,
-  `prod_desc` VARCHAR(200) NOT NULL,
+  `prod_desc` VARCHAR(500) NOT NULL,
   `inventario_cant` INT NOT NULL,
   `categorias_cate_id` INT NOT NULL,
   `precio_prod` INT NOT NULL,

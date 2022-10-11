@@ -84,10 +84,10 @@
             tabla.innerHTML += `<tbody>
             <tr>
               <th scope="row">${element.id}</th>
-              <td>${element.name}</td>
-              <td>${element.img}</td>
-              <td>${element.precio}</td>
-              <td>${element.description}</td>
+              <td><strong>${element.name}</strong></td>
+              <td><strong>${element.img}</strong></td>
+              <td><strong>${element.precio}</strong></td>
+              <td><strong>${element.description}</strong></td>
             </tr>`
             
         });
@@ -102,7 +102,11 @@
         "description":`${comment.value}`,
         "precio": `${cost.value}`
        }
+       preview.innerHTML=""
         showItem(preview, item)
+        if (preview.style.display="none") {
+            preview.style.display="flex"
+        }
     }); //btnPreview
 
 btnagregar.addEventListener("click", function(e) {
