@@ -48,7 +48,8 @@ button.addEventListener("click", function (e) {
                 icon: 'success',
                 title: 'Has accedido a tu cuenta',
                 background: '#282F36', 
-                color: '#C2943F'
+                color: '#C2943F',
+                confirmButtonColor: "#E8AF4E"
               })
               .then((result)=>{
                 if(result.isConfirmed){

@@ -8,7 +8,7 @@
     let btnagregar = document.getElementById("btnSubmit");
     let preview = document.getElementById("Preview");
     let btnPreview = document.getElementById("btnMostrar");
-
+    let inventario=[];
     /*  Titulo de tabla */
     tabla.innerHTML += `<thead class="thead-dark">
     <tr>
@@ -21,8 +21,13 @@
   </thead>`
 
 //Arreglo Inicial
-    let inventario = [];
-
+    if (localStorage.getItem("catalogo")) {
+    let tempInventario = JSON.parse(localStorage.getItem("catalogo"));
+    tempInventario.forEach(element => {
+        inventario.push(element)
+    });
+    
+    }
     //Función para añadir elemento en una card
 
     function showItem(div, item){
@@ -205,7 +210,7 @@ let item = {"id":"",
             <tr>
               <th scope="row">${element.id}</th>
               <td>${element.name}</td>
-              <td>${element.img}</td>
+              <td class="size">${element.img}</td>
               <td>${element.precio}</td>
               <td>${element.description}</td>
             </tr>`

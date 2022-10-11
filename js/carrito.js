@@ -1,4 +1,4 @@
-const tabla = document.getElementById("tabla");
+let tabla = document.getElementById("tabla");
 let tarjeta = document.getElementById("prod");
 let total = document.getElementById("total");
 let compra=[];
@@ -7,7 +7,7 @@ let suma = 0;
 
 /*       Se cargan los datos de las cards de ofertas        */
 window.addEventListener("load", function(){
-    getData();
+    printData();
     if (localStorage.getItem("carrito")) {
         compra = JSON.parse(localStorage.getItem("carrito"))
     }
@@ -17,7 +17,7 @@ window.addEventListener("load", function(){
 
 /*        Función para obtener información del json                */
 
-const getData = () =>{
+const printData = () =>{
     let promise = fetch("http://127.0.0.1:5500/data.json",{
       method:"GET"
     });//fetch
@@ -176,5 +176,3 @@ function deleteProd(e) {
     location.reload();
   }//if para identificar botón  
 }//función deleteProd
-
-console.log(JSON.parse(localStorage.getItem("carrito")).length==0);

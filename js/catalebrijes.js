@@ -41,14 +41,31 @@ function addItem(div, item){
 }
 
 window.addEventListener("load", function () {
-  getData();  
+  printData();  
   if (localStorage.getItem("carrito")) {
     compra = JSON.parse(localStorage.getItem("carrito"))
 }
 })
 
+const printData = () => {
+      let data = JSON.parse(localStorage.getItem("catalogo"));
+      data.forEach(element => {
+        if (element.id.charAt(0)==1){
+              if (element.id.charAt(3)%3==0) {
+                    addItem(itemsCont1, element)
+              } else if (element.id.charAt(3)%3==1){
+                    addItem(itemsCont2, element)
+              } else {
+                    addItem(itemsCont3, element)
+              }
+        }//if alebrijes id start=1
+        
+      }); //forEach
+}//funcion printData
 
-const getData = () =>{
+
+
+/* const getData = () =>{
     let promise = fetch("http://127.0.0.1:5500/data.json",{
       method:"GET"
     });//fetch
@@ -75,7 +92,7 @@ const getData = () =>{
     });
       
 }//getData
-
+ */
 
 itemsCont1.addEventListener("click", function(e){
   e.preventDefault();
@@ -114,7 +131,7 @@ function add(e) {
           })            
       }
       Swal.fire({
-        position: 'top-end',
+        position: 'center',
         icon: 'success',
         title: 'Tu compra se ha añadido a carrito',
         showConfirmButton: false,

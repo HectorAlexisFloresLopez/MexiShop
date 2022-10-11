@@ -93,7 +93,7 @@ if ((nombre.value.length>=3)
         (contra.value.length >=8)
     ){
     Swal.fire({
-        position: 'center-start',
+        position: 'center',
         icon: 'success',
         title: 'Registro exitoso',
         showConfirmButton: false,
