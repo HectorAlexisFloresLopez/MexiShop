@@ -40,18 +40,22 @@ button.addEventListener("click", function (e) {
         }
     });//forEach
     if (flag>0) {
-        setTimeout(window.location.assign("http://127.0.0.1:5500/index.html"),8000)
-        window.addEventListener("load", function(){
+        //setTimeout(window.location.assign("http://127.0.0.1:5500/index.html"),8000)
+            console.log("hola");
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Has accedido a tu cuenta',
-                showConfirmButton: false,
-                timer: 1500,
                 background: '#282F36', 
                 color: '#C2943F'
               })
-        })
+              .then((result)=>{
+                if(result.isConfirmed){
+                    window.location.assign("http://127.0.0.1:5500/index.html")
+                }
+              })
+        
     } else{
         Swal.fire({
             position: 'center',
