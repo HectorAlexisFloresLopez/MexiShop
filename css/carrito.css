@@ -218,6 +218,13 @@ main .container{
   box-shadow: 4px 4px 4px rgb(219, 219, 219);
 }
 
+td .btn{
+  background-color: #282F36;
+  color: #E8AF4E;
+  font-size: smaller !important;
+}
+
+
 
 /*   Estilos de letrero    */
 
