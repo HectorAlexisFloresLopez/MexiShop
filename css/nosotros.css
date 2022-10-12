@@ -1,5 +1,15 @@
 /* Estilos de Imágenes del equipo*/
 
+h2 {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+
+}
+
 .box{
   width: auto;
   display: grid;
