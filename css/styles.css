@@ -7,6 +7,16 @@
   --blanco: #ffffff;
 }
 
+h2 {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+
+}
+
 .subtema {
   font-size: 32px;
   color: var(--azul);

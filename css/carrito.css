@@ -1,5 +1,14 @@
  /*estilos del body*/
  
+h2 {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+
+}
 
  :root {
     --oscuro: #000000;
